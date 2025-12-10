@@ -12,10 +12,20 @@ class PostController extends Controller
     }
 
      public function store(){
-        return 'store t';
+        return response()->json(
+            [
+                 'id'=>1,
+            'title'=>'Games',
+            'body'=>'Lets go'
+            ]
+            )->setStatusCode(201);
     }
 
     public function show(string $id){
-        return 'show ' .$id;
+        return [
+            'id'=>1,
+            'title'=>'Games',
+            'body'=>'Lets go'
+        ];
     }
 }
